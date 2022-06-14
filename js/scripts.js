@@ -27,7 +27,7 @@ function Ticket(movieTitle,time,age) {
 
 //Business Logic// ticket price
 
-function MoviePrice(movieTitle,time,age) {
+function moviePrice(movieTitle,time,age) {
  const discountPrice = "$10";
  const regularPrice = "$15";
  if (movieTitle === "Holes" || time.includes("am")  || age <= 12 || age >= 65) {
@@ -43,7 +43,14 @@ $(document).ready(function() {
     const title = $("input:radio[name=title]:checked").val();
     const timeOfDay = $("input:radio[name=timeOfDay]:checked").val();
     const ageOfCustomer = $("input:text").val();
-    
+    // let newTicket = new Ticket(title, timeOfDay, ageOfCustomer)
+    let newMoviePrice = moviePrice(title, timeOfDay, ageOfCustomer)
+
+    $("#moviePrice").append("<p>" + "Ticket Price:" + newMoviePrice + "</p>");
+    // if 
     event.preventDefault()
     });
 })
+
+
+
