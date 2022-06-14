@@ -25,26 +25,25 @@ function Ticket(movieTitle,time,age) {
   this.age = age;
 }
 
+//Business Logic// ticket price
 
 function MoviePrice(movieTitle,time,age) {
  const discountPrice = "$10";
  const regularPrice = "$15";
- if (movieTitle === "Holes" || time === "AM"  || age <= 12 || age >= 65) {
+ if (movieTitle === "Holes" || time.includes("am")  || age <= 12 || age >= 65) {
    return discountPrice;
  } else {
    return regularPrice;
  }
 }
 
-
-
-
-//function ^ to set age parameters effecting movieprice//
-
-
-
-
-let ticketOrder = new TicketOrder ();
-let ticketOne = new Ticket("matrix", "3:30", "12");
-
+//UI logic//
+$(document).ready(function() {
+  $("form#ticketOrder").submit(function(event) {
+    event.preventDefault();
+    const title = $("input:radio[name=title]:checked").val();
+    const timeOfDay = $("input:radio [name=timeOfDay]:checked").val();
+    const ageOfCustomer = $("input:text").val();
+  })
+})
 

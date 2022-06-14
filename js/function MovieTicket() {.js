@@ -19,4 +19,5 @@ function discountTicket (inputAge) {
 
 // let age1= new Age()
 
-// let 
+// let normalTicket = ['Speed','PM']
+
