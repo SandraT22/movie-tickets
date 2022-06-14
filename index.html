@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Movie Tickets</title>
+</head>
+<body>
+  <div class="container">
+    <form id="options">
+      <div class="radio">
+        <p>Select Movie Title:</p>
+        <label>
+          <input type="radio" name="title" value="Holes">
+          Holes
+        </label>
+        <label>
+          <input type="radio" name="title" value="Lightyear">
+          Lightyear 
+        </label>
+        <p>Select a show time:</p>
+        <label>
+          <input type="radio" name="timeOfDay" value="9:00am">
+          9:00am
+        </label>
+        <label>
+          <input type="radio" name="timeOfDay" value="2:00pm">
+          2:00pm
+        </label>
+      </div>
+      <div class="ageInput">
+        <p>Please enter your age:</p>
+        <label>
+          <input type="text" name="ageOfCustomer">
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

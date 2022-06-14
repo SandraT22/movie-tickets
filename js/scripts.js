@@ -39,11 +39,11 @@ function MoviePrice(movieTitle,time,age) {
 
 //UI logic//
 $(document).ready(function() {
-  $("form#ticketOrder").submit(function(event) {
-    event.preventDefault();
+  $("#options").submit(function(event) {
     const title = $("input:radio[name=title]:checked").val();
-    const timeOfDay = $("input:radio [name=timeOfDay]:checked").val();
+    const timeOfDay = $("input:radio[name=timeOfDay]:checked").val();
     const ageOfCustomer = $("input:text").val();
-  })
+    
+    event.preventDefault()
+    });
 })
-
