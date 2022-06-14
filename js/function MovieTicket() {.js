@@ -19,3 +19,4 @@ function discountTicket (inputAge) {
 
 // let age1= new Age()
 
+// let 

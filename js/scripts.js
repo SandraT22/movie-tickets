@@ -25,13 +25,26 @@ function Ticket(movieTitle,time,age) {
   this.age = age;
 }
 
-function MoviePrice(age) {
- if (age <= 12 || age >= 65) {
-   return true;
+
+function MoviePrice(movieTitle,time,age) {
+ const discountPrice = "$10";
+ const regularPrice = "$15";
+ if (movieTitle === "Holes" || time === "AM"  || age <= 12 || age >= 65) {
+   return discountPrice;
  } else {
-   return false;
+   return regularPrice;
  }
 }
 
+
+
+
+//function ^ to set age parameters effecting movieprice//
+
+
+
+
 let ticketOrder = new TicketOrder ();
 let ticketOne = new Ticket("matrix", "3:30", "12");
+
+
